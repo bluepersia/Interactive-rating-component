@@ -1,0 +1,138 @@
+:root 
+{
+    --Orange: hsl(25, 97%, 53%);
+
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlueLighter: hsl(213, 19%, 25%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+html {
+    font-size: 15px;
+    font-family: "Overpass", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--VeryDarkBlue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    padding: 6.4%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* :first-child {
+  margin-top: 0;  
+}
+
+* :last-child {
+    margin-bottom: 0;
+}
+
+.card{
+    max-width: 415px;
+    background-color: var(--DarkBlue);
+    border-radius: 14px;
+    padding: 2em;
+}
+
+.card_star-wrapper {
+    width: 3.33em;
+    height: 3.33em;
+    background-color: var(--DarkBlueLighter);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_title {
+    font-size: 1.8rem;
+}
+
+.card_body {
+    color: var(--LightGrey);
+    line-height: 1.6;
+}
+
+
+
+.card_ratings {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card_rating-wrapper {
+    width: 3.33em;
+    height: 3.33em;
+    background-color: var(--DarkBlueLighter);
+    color: var(--MediumGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 300ms;
+}
+
+.card_rating-wrapper:hover {
+    background-color: var(--Orange);
+    color: var(--White);
+}
+
+
+.card_rating-wrapper.selected {
+    background-color: var(--MediumGrey);
+    color: var(--White);
+}
+
+
+.card_rating {
+    color: inherit;
+    background: none;
+    border:none;
+}
+
+.card_submit {
+    background-color: var(--Orange);
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    color: var(--White);
+    border-radius: 20px;
+    padding: 1em;
+    border:none;
+    letter-spacing: .2em;
+    margin-top: 2em;
+    transition: all 300ms;
+}
+
+.card_submit:hover {
+    background-color:var(--White);
+    color: var(--Orange);
+}
+
+
+.card.thanks{
+    text-align: center;
+}
+
+.card_selected-info {
+    color: var(--Orange);
+    background-color: var(--DarkBlueLighter);
+    width: fit-content;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em 1em;
+}
